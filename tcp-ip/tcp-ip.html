@@ -94,7 +94,7 @@
                     </div>
 
                     <div class="mt-6">
-                        <h4 class="text-xl font-semibold mb-2 text-black underline">How the Transport Laye Works:</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-black underline">How the Transport Layer Works:</h4>
                         <ul class="list-disc list-inside">
                             <li class="mb-2"><span class="font-semibold text-green-600">Segmentation and
                                     Reassembly:</span> Divides messages into smaller segments for transmission and
@@ -113,6 +113,73 @@
                                 Ensures that data is delivered accurately and in the correct order, using acknowledgment
                                 and retransmission mechanisms.</li>
                         </ul>
+
+                        <div class="mt-6">
+                            <h4 class="text-xl font-semibold mb-2 text-black underline">Transport Layer Protocols:</h4>
+                            <p>The transport layer uses different protocols to provide its services, the most common
+                                being TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).</p>
+                            <h5 class="font-semibold text-green-600 mt-2">TCP (Transmission Control Protocol):</h5>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><span class="font-semibold">Connection-oriented:</span> Establishes a
+                                    connection before data transfer.</li>
+                                <li class="mb-2"><span class="font-semibold">Reliable:</span> Ensures data is delivered
+                                    accurately and in order.</li>
+                                <li class="mb-2"><span class="font-semibold">Flow Control:</span> Uses sliding windows.
+                                </li>
+                                <li class="mb-2"><span class="font-semibold">Error Detection:</span> Uses checksums and
+                                    acknowledgments.</li>
+                            </ul>
+                            <h5 class="font-semibold text-green-600">UDP (User Datagram Protocol):</h5>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><span class="font-semibold">Connectionless:</span> Sends data without
+                                    establishing a connection.</li>
+                                <li class="mb-2"><span class="font-semibold">Unreliable:</span> Does not guarantee
+                                    delivery, order, or error checking.</li>
+                                <li class="mb-2"><span class="font-semibold">Low Overhead:</span> Faster and more
+                                    efficient for applications that do not require reliability.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-6">
+                            <h4 class="text-xl font-semibold mb-2 text-black underline">How It Works: Example with TCP:
+                            </h4>
+                            <h5 class="font-semibold text-green-600">1. Connection Establishment:</h5>
+                            <p>Three-way handshake:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><span class="font-semibold">SYN:</span> The client sends a SYN
+                                    (synchronize) packet to the server.</li>
+                                <li class="mb-2"><span class="font-semibold">SYN-ACK:</span> The server responds with a
+                                    SYN-ACK (synchronize-acknowledge) packet.</li>
+                                <li class="mb-2"><span class="font-semibold">ACK:</span> The client sends an ACK
+                                    (acknowledge) packet back to the server, establishing the connection.</li>
+                            </ul>
+                            <h5 class="font-semibold text-green-600">2. Data Transfer:</h5>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2">Data from the application layer is segmented.</li>
+                                <li class="mb-2">Each segment is assigned a sequence number.</li>
+                                <li class="mb-2">The segments are sent to the destination.</li>
+                                <li class="mb-2">The receiver sends acknowledgments for received segments.</li>
+                                <li class="mb-2">If a segment is missing or corrupted, it is retransmitted.</li>
+                            </ul>
+                            <h5 class="font-semibold text-green-600">3. Flow Control and Congestion Control:</h5>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2">TCP uses the sliding window protocol to control the flow of data.</li>
+                                <li class="mb-2">Congestion control mechanisms like slow start and congestion avoidance
+                                    are used to prevent network congestion.</li>
+                            </ul>
+                            <h5 class="font-semibold text-green-600">4. Connection Termination:</h5>
+                            <p>Four-way handshake:</p>
+                            <ul class="list-disc list-inside mb-4">
+                                <li class="mb-2"><span class="font-semibold">FIN:</span> The client sends a FIN (finish)
+                                    packet to terminate the connection.</li>
+                                <li class="mb-2"><span class="font-semibold">ACK:</span> The server acknowledges the
+                                    FIN.</li>
+                                <li class="mb-2"><span class="font-semibold">FIN:</span> The server sends a FIN packet.
+                                </li>
+                                <li class="mb-2"><span class="font-semibold">ACK:</span> The client acknowledges the
+                                    server’s FIN, terminating the connection.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -228,7 +295,7 @@
     </main>
 
     <footer class="bg-blue-800 p-4 text-white text-center">
-        <p>&copy; 2024 Network Protocols Blog. All rights reserved.</p>
+        <p>© Developed by Andrea Guarneri 2024 Network Protocols Blog. All rights reserved.</p>
     </footer>
 </body>
 
