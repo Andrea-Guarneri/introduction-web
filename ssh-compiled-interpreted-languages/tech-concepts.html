@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href=https://cdn-icons-png.flaticon.com/512/4365/4365271.png>
+
+    <title>Tech Concepts Blog</title>
+
+<body class="bg-gray-200 text-gray-800">
+    <header class="bg-emerald-700 text-white py-4">
+        <h1 class="text-5xl text-center font-bold">💻 Tech Blog 📲 </h1>
+    </header>
+
+    <main class="container mx-auto p-4">
+
+        <!-- SSH Section -->
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-4xl font-bold mb-4 underline">SSH (Secure Shell)</h2>
+            <p>SSH is a cryptographic network protocol used for secure data communication, remote command-line login,
+                remote command execution, and other secure network services between two networked computers. It encrypts
+                the session, making it impossible for anyone to see what you are doing, ensuring privacy and security.
+            </p>
+            <img src="https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/61c1b93d1b91c10cd7ca8ffa_SSH%20Preview.png"
+                alt="SSH protocol" class="my-4 mx-auto">
+            <h3 class="text-2xl font-semibold mt-4 mb-4">How SSH Works</h3>
+            <p><span class="font-bold text-black">SSH (Secure Shell)</span> is a protocol designed for secure network
+                communications. It provides a secure channel
+                over an unsecured network by using cryptographic techniques. Here’s a detailed breakdown of how SSH
+                works and its fundamental components.</p>
+
+            <h4 class="text-2xl font-semibold mt-4 mb-2">Fundamental Components of SSH</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">SSH Client:</span> The software or tool that
+                    initiates the connection to the remote server.
+                </li>
+                <li class="mb-2"><span class="font-semibold text-black">SSH Server:</span> The software on the remote
+                    machine that the client connects to.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Public and Private Keys:</span> Used for
+                    authenticating the connection.</li>
+            </ul>
+
+            <h4 class="text-2xl font-semibold mt-4 mb-2">Key Points of SSH</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Encryption:</span> Ensures that all data
+                    transmitted between the client and server is
+                    encrypted.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Authentication:</span> Verifies the identity of
+                    the client and server to prevent unauthorized
+                    access.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Integrity:</span> Guarantees that the data sent
+                    over the SSH connection is not altered or
+                    tampered with.</li>
+            </ul>
+
+            <h4 class="text-2xl font-semibold mt-4 mb-2">How SSH Works</h4>
+            <p class="mb-2">SSH works through a series of steps to establish a secure connection:</p>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Initiation:</span> The SSH client initiates a
+                    connection to the SSH server on a remote
+                    machine. By default, SSH runs on port 22.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Key Exchange:</span> The client and server
+                    exchange public keys. The server sends its public
+                    key to the client. The client uses the server's public key to encrypt a session key which is then
+                    sent to the server. The server decrypts the session key using its private key.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Session Encryption:</span> Both the client and
+                    server use the session key to encrypt and
+                    decrypt all further communication. This ensures that any data transmitted over the connection is
+                    secure and private.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Authentication:</span> The server authenticates
+                    the client using various methods such as
+                    passwords, public key authentication, or more advanced methods like Kerberos. For public key
+                    authentication, the client presents its public key, and if the server has this key in its authorized
+                    keys list, the client is authenticated.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Data Transfer:</span> Once the authentication is
+                    successful, a secure channel is established.
+                    Commands, data, and other information can now be sent securely over this channel. SSH can also
+                    forward other types of traffic over this encrypted channel, such as HTTP, by using tunneling.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Session Management:</span> SSH supports multiple
+                    concurrent sessions over a single SSH
+                    connection. These sessions can be used for command execution, file transfers (using SCP or SFTP),
+                    and port forwarding.</li>
+            </ul>
+            <h4 class="text-xl font-semibold mt-4 mb-2">Example Workflow</h4>
+            <p class="mb-2 ">Here’s an example of an SSH workflow:</p>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Client Initiation:</span> <code
+                        class="text-blue-600">ssh user@remote-server</code></li>
+                <li class="mb-2"><span class="font-semibold text-black">Key Exchange:</span> The client and server
+                    exchange public keys and establish a session key.
+                </li>
+                <li class="mb-2"><span class="font-semibold text-black">Client Authentication:</span> The client proves
+                    its identity by presenting its private key or
+                    entering a password.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Command Execution:</span> The client can execute
+                    commands on the remote server, such as
+                    <code>ls</code>, <code>cd</code>, <code>cat</code>, etc. Example: <code>ls -l</code> to list files
+                    in the remote directory.
+                </li>
+                <li class="mb-2"><span class="font-semibold text-black">Secure File Transfer:</span> Using SCP:
+                    <code>scp localfile user@remote-server:/path/to/destination</code> Using SFTP:
+                    <code>sftp user@remote-server</code> followed by SFTP commands to transfer files.
+                </li>
+            </ul>
+
+            <img src="https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/61c1b963247368113bbeef17_Secure%20Shell%20work.png"
+                alt="SSH Diagram" class="my-4 mx-auto">
+            <h4 class="text-2xl font-semibold mt-4 mb-2">Conclusion</h4>
+            <p>SSH is a robust and secure protocol essential for secure remote access and data transfer over a network.
+                Its encryption, authentication, and integrity checks ensure that sensitive data remains protected from
+                eavesdropping and tampering. Understanding how SSH works helps in securely managing and accessing remote
+                systems.</p>
+        </section>
+
+        <!-- Compiled vs. Interpreted Languages -->
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-4xl font-bold mb-4 underline">Compiled & Interpreted Languages</h2>
+
+            <h3 class="text-2xl font-semibold mt-4 mb-2 underline">Compiled Languages</h3>
+            <p class="mb-2">Compiled languages are translated directly into machine code that the processor can execute.
+                Here's how they work and their fundamental points:</p>
+            <h4 class="text-xl font-semibold mt-2 mb-2">Compilation Process:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Source Code:</span> Written by developers in a
+                    high-level programming language (e.g., C, C++, Rust).</li>
+                <li class="mb-2"><span class="font-semibold text-black">Compilation:</span> The source code is
+                    translated into machine code (binary code) using a compiler.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Execution:</span> The resulting executable file
+                    contains machine code that the CPU can directly execute.</li>
+            </ul>
+            <h4 class="text-xl font-semibold mt-4 mb-2">Advantages:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Performance:</span> Compiled languages typically
+                    execute faster because the code is already in the machine's native binary format.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Optimization:</span> Compilers can optimize code
+                    during the compilation process for specific hardware platforms, improving efficiency.</li>
+            </ul>
+            <h4 class="text-xl font-semibold mt-4 mb-2">Disadvantages:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Portability:</span> Compiled programs are often
+                    platform-dependent. They may require different versions for different operating systems or
+                    architectures.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Development Time:</span> Compiling large
+                    programs can take time, especially for complex projects.</li>
+            </ul>
+            <h4 class="text-lg font-semibold mt-4 mb-2">Examples:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">C:</span> Known for its efficiency and low-level
+                    control over hardware.</li>
+                <li class="mb-2"><span class="font-semibold text-black">C++:</span> Offers object-oriented features and
+                    is used for system-level programming.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Rust:</span> Focuses on safety and performance,
+                    suitable for systems programming.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mt-4 mb-2 underline">Interpreted Languages</h3>
+            <p class="mb-2">Interpreted languages are executed line-by-line by an interpreter software at runtime. Here
+                are their working principles and fundamental points:</p>
+            <h4 class="text-lg font-semibold mt-2 mb-2">Execution Process:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Source Code:</span> Written in a high-level
+                    language (e.g., Python, JavaScript, Ruby).</li>
+                <li class="mb-2"><span class="font-semibold text-black">Interpretation:</span> The interpreter reads and
+                    executes the code line-by-line without prior compilation into machine code.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Execution:</span> The interpreter translates
+                    each instruction into machine code or directly executes actions based on the code's semantics.</li>
+            </ul>
+            <h4 class="text-lg font-semibold mt-4 mb-2">Advantages:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Flexibility:</span> Interpreted languages are
+                    typically more flexible and easier to modify during development.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Platform Independence:</span> Code written in
+                    interpreted languages can run on any platform with an interpreter available for that platform.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Debugging:</span> Easier debugging as errors are
+                    often reported in context with the source code.</li>
+            </ul>
+            <h4 class="text-lg font-semibold mt-4 mb-2">Disadvantages:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Performance:</span> Generally slower execution
+                    speed compared to compiled languages because of the interpretation overhead.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Dependency on Interpreter:</span> Requires an
+                    interpreter installed on the target system to run the code.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Less Optimization:</span> Interpreters may not
+                    optimize code as extensively as compilers.</li>
+            </ul>
+            <h4 class="text-lg font-semibold mt-4 mb-2">Examples:</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Python:</span> Known for its simplicity and
+                    readability, widely used in web development, scientific computing, and automation.</li>
+                <li class="mb-2"><span class="font-semibold text-black">JavaScript:</span> Primarily used for
+                    client-side scripting in web browsers and server-side scripting (Node.js) for web development.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Ruby:</span> Focuses on simplicity and
+                    productivity, popular for web application development.</li>
+            </ul>
+
+            <p class="mt-4">Understanding these distinctions helps in choosing the right language for specific
+                development needs based on performance requirements, development speed, and platform considerations.</p>
+        </section>
+
+
+        <!-- JavaScript Compilation Process Section -->
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-4xl font-bold mb-4 underline">JavaScript Compilation Process</h2>
+            <p>JavaScript uses a Just-In-Time (JIT) Compilation approach. This combines elements of both compilation and
+                interpretation to optimize performance.</p>
+            <h3 class="text-xl font-semibold mt-4 mb-2">Steps in the JavaScript Compilation Process</h3>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Tokenization (Lexical Analysis):</span> The
+                    source code is split into meaningful chunks called
+                    tokens,
+                    like keywords, identifiers, operators, and literals.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Parsing (Syntax Analysis):</span> Tokens are
+                    analyzed according to the grammar rules of
+                    JavaScript to
+                    form an Abstract Syntax Tree (AST), representing the code's syntactic structure.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Semantic Analysis:</span> The AST is checked for
+                    semantic errors and compliance with
+                    JavaScript's
+                    rules, including variable declarations, scope rules, and type checks.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Optimization:</span> The JavaScript engine
+                    optimizes the code, applying techniques like
+                    constant
+                    folding and inline expansion to improve runtime performance.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Code Generation:</span> The optimized AST is
+                    translated into executable code, either machine
+                    code
+                    directly or bytecode for interpretation depending on the JavaScript engine.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Execution:</span> The generated code is executed
+                    line by line, variables are assigned values,
+                    functions are called, and interactions with the environment occur (e.g., DOM manipulation in
+                    browsers).</li>
+            </ul>
+            <img src="https://miro.medium.com/v2/resize:fit:960/1*pw6eQeD2X8nl3BO9pSa-9g.png" alt="JavaScript Engine"
+                class="my-4 mx-auto">
+            <h3 class="text-xl font-semibold mt-4">Video Explanation:</h3>
+
+            <div class="my-4 flex justify-center items-center p-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d7KHAVaX_Rs?si=vhWgL5XsZQTzlLwH"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-emerald-700 text-white text-center py-4">
+        <p>© Developed by Andrea Guarneri 2024. Tech Concepts Blog</p>
+    </footer>
+
+</body>
+
+</html>
