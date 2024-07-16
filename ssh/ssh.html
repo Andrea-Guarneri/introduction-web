@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href=https://cdn-icons-png.flaticon.com/512/4365/4365271.png>
+
+    <title>SSH (Secure Shell) Blog</title>
+
+</head>
+
+<body class="bg-gray-200 text-gray-800">
+    <header class="bg-emerald-700 text-white py-4">
+        <h1 class="text-5xl text-center font-bold">💻 SSH (Secure Shell) Blog 🔐 </h1>
+    </header>
+
+    <main class="container mx-auto p-4">
+
+        <!-- SSH Section -->
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-4xl font-bold mb-4 underline">SSH (Secure Shell)</h2>
+            <p>SSH is a cryptographic network protocol used for secure data communication, remote command-line login,
+                remote command execution, and other secure network services between two networked computers. It encrypts
+                the session, making it impossible for anyone to see what you are doing, ensuring privacy and security.
+            </p>
+            <img src="https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/61c1b93d1b91c10cd7ca8ffa_SSH%20Preview.png"
+                alt="SSH protocol" class="my-4 mx-auto">
+            <h3 class="text-2xl font-semibold mt-4 mb-4">How SSH Works</h3>
+            <p><span class="font-bold text-black">SSH (Secure Shell)</span> is a protocol designed for secure network
+                communications. It provides a secure channel
+                over an unsecured network by using cryptographic techniques. Here’s a detailed breakdown of how SSH
+                works and its fundamental components.</p>
+
+            <h4 class="text-2xl font-semibold mt-4 mb-2">Fundamental Components of SSH</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">SSH Client:</span> The software or tool that
+                    initiates the connection to the remote server.
+                </li>
+                <li class="mb-2"><span class="font-semibold text-black">SSH Server:</span> The software on the remote
+                    machine that the client connects to.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Public and Private Keys:</span> Used for
+                    authenticating the connection.</li>
+            </ul>
+
+            <h4 class="text-2xl font-semibold mt-4 mb-2">Key Points of SSH</h4>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Encryption:</span> Ensures that all data
+                    transmitted between the client and server is
+                    encrypted.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Authentication:</span> Verifies the identity of
+                    the client and server to prevent unauthorized
+                    access.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Integrity:</span> Guarantees that the data sent
+                    over the SSH connection is not altered or
+                    tampered with.</li>
+            </ul>
+
+            <h4 class="text-2xl font-semibold mt-4 mb-2">How SSH Works</h4>
+            <p class="mb-2">SSH works through a series of steps to establish a secure connection:</p>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Initiation:</span> The SSH client initiates a
+                    connection to the SSH server on a remote
+                    machine. By default, SSH runs on port 22.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Key Exchange:</span> The client and server
+                    exchange public keys. The server sends its public
+                    key to the client. The client uses the server's public key to encrypt a session key which is then
+                    sent to the server. The server decrypts the session key using its private key.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Session Encryption:</span> Both the client and
+                    server use the session key to encrypt and
+                    decrypt all further communication. This ensures that any data transmitted over the connection is
+                    secure and private.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Authentication:</span> The server authenticates
+                    the client using various methods such as
+                    passwords, public key authentication, or more advanced methods like Kerberos. For public key
+                    authentication, the client presents its public key, and if the server has this key in its authorized
+                    keys list, the client is authenticated.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Data Transfer:</span> Once the authentication is
+                    successful, a secure channel is established.
+                    Commands, data, and other information can now be sent securely over this channel. SSH can also
+                    forward other types of traffic over this encrypted channel, such as HTTP, by using tunneling.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Session Management:</span> SSH supports multiple
+                    concurrent sessions over a single SSH
+                    connection. These sessions can be used for command execution, file transfers (using SCP or SFTP),
+                    and port forwarding.</li>
+            </ul>
+            <h4 class="text-xl font-semibold mt-4 mb-2">Example Workflow</h4>
+            <p class="mb-2 ">Here’s an example of an SSH workflow:</p>
+            <ul class="list-disc pl-5">
+                <li class="mb-2"><span class="font-semibold text-black">Client Initiation:</span> <code
+                        class="text-blue-600">ssh user@remote-server</code></li>
+                <li class="mb-2"><span class="font-semibold text-black">Key Exchange:</span> The client and server
+                    exchange public keys and establish a session key.
+                </li>
+                <li class="mb-2"><span class="font-semibold text-black">Client Authentication:</span> The client proves
+                    its identity by presenting its private key or
+                    entering a password.</li>
+                <li class="mb-2"><span class="font-semibold text-black">Command Execution:</span> The client can execute
+                    commands on the remote server, such as
+                    <code class="text-red-600">ls</code>, <code class="text-red-600">cd</code>, <code
+                        class="text-red-600">cat</code>, etc. Example: <code class="text-red-600">ls -l</code> to list
+                    files
+                    in the remote directory.
+                </li>
+                <li class="mb-2"><span class="font-semibold text-black">Secure File Transfer:</span> Using SCP:
+                    <code class="text-blue-600">scp localfile user@remote-server:/path/to/destination</code> Using SFTP:
+                    <code class="text-blue-600">sftp user@remote-server</code> followed by SFTP commands to transfer
+                    files.
+                </li>
+            </ul>
+
+            <img src="https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/61c1b963247368113bbeef17_Secure%20Shell%20work.png"
+                alt="SSH Diagram" class="my-4 mx-auto">
+            <h4 class="text-2xl font-semibold mt-4 mb-2">Conclusion</h4>
+            <p>SSH is a robust and secure protocol essential for secure remote access and data transfer over a network.
+                Its encryption, authentication, and integrity checks ensure that sensitive data remains protected from
+                eavesdropping and tampering. Understanding how SSH works helps in securely managing and accessing remote
+                systems.</p>
+        </section>
+    </main>
+
+    <footer class="bg-emerald-700 text-white text-center py-4">
+        <p>© Developed by Andrea Guarneri 2024. SSH (Secure Shell) Blog</p>
+    </footer>
+</body>
+
+</html>
