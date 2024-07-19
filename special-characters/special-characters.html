@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="https://image.spreadshirtmedia.net/image-server/v1/compositions/T1089A2PA4283PT17X39Y9D165705169W5669H6234CxFFFFFF/views/1,width=550,height=550,appearanceId=2,backgroundColor=000000,noPt=true/and-symbol-special-characters-beanie.jpg">
+
+    <title>Understanding Special Characters in HTML</title>
+
+</head>
+
+<body class="bg-gray-300 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-emerald-600 text-white p-6 text-center">
+        <h1 class="text-4xl font-bold">🧠 Understanding Special Characters in HTML </h1>
+        <p class="mt-2">A Guide to Special Characters and Their Usage</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+
+        <section id="introduction" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Introduction</h2>
+            <p class="mb-4">HTML (HyperText Markup Language) uses special characters to display symbols that are not
+                readily available on the keyboard. These characters are represented by specific codes. Understanding
+                these special characters and how to use them properly is essential for web development.</p>
+        </section>
+
+        <!-- Special Characters Section -->
+        <section id="special-characters" class="mb-12">
+
+            <h2 class="text-3xl font-bold mb-4">Special Characters</h2>
+            <table class="min-w-full bg-white rounded-lg shadow-md overflow-hidden">
+                <thead class="bg-blue-600 text-white">
+                    <tr>
+                        <th class="w-1/3 px-4 py-2">Character</th>
+                        <th class="w-1/3 px-4 py-2">Entity Name</th>
+                        <th class="w-1/3 px-4 py-2">Entity Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b text-center">
+                        <td class="px-4 py-2">&lt;</td>
+                        <td class="px-4 py-2">&amp;lt;</td>
+                        <td class="px-4 py-2">&amp;#60;</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 text-center">
+                        <td class="px-4 py-2">&gt;</td>
+                        <td class="px-4 py-2">&amp;gt;</td>
+                        <td class="px-4 py-2">&amp;#62;</td>
+                    </tr>
+                    <tr class="border-b text-center">
+                        <td class="px-4 py-2">&amp;</td>
+                        <td class="px-4 py-2">&amp;amp;</td>
+                        <td class="px-4 py-2">&amp;#38;</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 text-center">
+                        <td class="px-4 py-2">&quot;</td>
+                        <td class="px-4 py-2">&amp;quot;</td>
+                        <td class="px-4 py-2">&amp;#34;</td>
+                    </tr>
+                    <tr class="border-b text-center">
+                        <td class="px-4 py-2">&apos;</td>
+                        <td class="px-4 py-2">&amp;apos;</td>
+                        <td class="px-4 py-2">&amp;#39;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- <pre> and <code> Tags Section -->
+        <section id="pre-code-tags" class="mb-12">
+
+            <h2 class="text-3xl font-bold mb-4">&lt;pre&gt; and &lt;code&gt; Tags</h2>
+            <p class="mb-4">The <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags are used to display
+                preformatted text and code snippets in HTML.</p>
+
+            <h3 class="text-2xl font-bold mb-2">&lt;pre&gt; Tag</h3>
+            <p class="mb-4">The <code>&lt;pre&gt;</code> (preformatted text) tag is used to display text exactly as it
+                is written in the HTML file. This tag preserves both spaces and line breaks.</p>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+                <pre class="whitespace-pre-wrap">
+                        &lt;pre&gt;
+                        function helloWorld() {
+                            console.log("Hello, World!");
+                        }
+                        &lt;/pre&gt;
+                </pre>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-2 mt-6">&lt;code&gt; Tag</h3>
+            <p class="mb-4">The <code>&lt;code&gt;</code> tag is used to define a piece of computer code. By default,
+                the content inside this tag is displayed in a monospace font.</p>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+                <pre class="whitespace-pre-wrap">
+                    &lt;code&gt;console.log("Hello, World!");&lt;/code&gt;
+                </pre>
+            </div>
+        </section>
+
+        <!-- Usage Examples Section -->
+        <section id="usage-examples" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Usage Examples</h2>
+            <p class="mb-4">Here are some examples of how to use special characters and tags:</p>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+                <pre class="whitespace-pre-wrap">
+                    &lt;p&gt;To include a less than symbol, use &amp;amp;lt; which displays as &amp;lt;. Similarly, for a greater than symbol, use &amp;amp;gt; which displays as &amp;gt;.&lt;/p&gt;
+
+                    &lt;p&gt;To display a quote, use &amp;amp;quot; which displays as &amp;quot;. For an ampersand, use &amp;amp;amp; which displays as &amp;amp;.&lt;/p&gt;
+                </pre>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-emerald-600 text-white text-center p-6 mt-8">
+        <p>© Developed by Andrea Guarneri 2024 HTML Guide Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
